@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Disciplinas</title>
+    </head>
+    <body>
+        <h1>Disciplinas Cadastradas</h1>
+
+        {% for disciplina in disciplinas %}
+            <h2>Nome: {{disciplina.nome}}</h2>
+            <p>Carga Horária: {{disciplina.carga_horaria}}</p>
+            <p>{{disciplina.area}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_disciplina' %}">Adicionar disciplina</a>
+    </form>
+    </body>
+</html>

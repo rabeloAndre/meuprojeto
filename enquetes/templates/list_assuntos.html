@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assuntos</title>
+    </head>
+    <body>
+        <h1>Assuntos Cadastrados</h1>
+
+        {%for assunto in assuntos %}
+            <h2>Nome: {{assunto.nome}}</h2>
+            <p>Matéria: {{assunto.materia}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_assunto' %}">Adicionar assunto</a>
+    </form>
+    </body>
+</html>

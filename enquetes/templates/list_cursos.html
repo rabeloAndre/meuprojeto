@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cursos</title>
+    </head>
+    <body>
+        
+        <h1>Cursos Cadastrados</h1>
+
+        {% for curso in cursos %}
+            <h2>Nome: {{curso.nome}}</h2>
+            <p>Carga horária: {{curso.carga_horaria}}</p>
+            <p>Área: {{curso.area}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_curso' %}">Adicionar curso</a>
+
+    </form>
+    </body>
+</html>

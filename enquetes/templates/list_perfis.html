@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perfis</title>
+</head>
+<body>
+
+	<h1>Perfis Cadastrados</h1>
+
+		{%for perfil in perfis %}
+			<h2>Usuário: {{perfil.nome_usuario}}</h2>
+		{% endfor %}
+
+	<a href="{% url 'add_perfil' %}">Adicionar perfil</a>
+
+</body>
+</html>

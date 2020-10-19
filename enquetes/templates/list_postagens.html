@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perfis</title>
+</head>
+<body>
+
+	<h1>Postagens Cadastradas</h1>
+
+		{% for postagem in postagens %}
+			<h2>Texto: {{postagem.texto}}</h2>
+			<p>Usuário que postou: {{postagem.perfil.nome_usuario}}</p>
+		{% endfor %}
+
+	<a href="{% url 'add_postagem' %}">Adicionar postagem</a>
+
+</body>
+</html>
