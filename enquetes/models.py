@@ -33,7 +33,15 @@ class Curso(models.Model):
 class Disciplina(models.Model):
    	nome = models.CharField(max_length=100)
    	carga_horaria = models.IntegerField()
+<<<<<<< HEAD
    	curso = models.ManyToManyField(Curso)
 
    	def __str__(self):
    		return self.nome
+=======
+   	curso = models.ManyToManyField(Curso,
+   		related_name = 'curso')
+
+   	def __str__(self):
+   		return self.texto
+>>>>>>> bc9653b3a3fe156877d4fddb95dc093131ad7590

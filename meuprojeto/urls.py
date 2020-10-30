@@ -19,7 +19,11 @@ from enquetes import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('', views.bemvindo, name='home'),
+=======
+    path('', views.bemvindo),
+>>>>>>> bc9653b3a3fe156877d4fddb95dc093131ad7590
     path('add_assunto/', views.add_assunto, name='add_assunto'),
     path('list_assuntos', views.list_assuntos, name='list_assuntos'),
     path('add_perfil/', views.add_perfil, name='add_perfil'),

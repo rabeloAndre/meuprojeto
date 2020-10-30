@@ -80,7 +80,10 @@ def add_disciplina(request):
         if form.is_valid():
             model_instance = form.save(commit=False)
             model_instance.save()
+<<<<<<< HEAD
             form.save_m2m()
+=======
+>>>>>>> bc9653b3a3fe156877d4fddb95dc093131ad7590
             return redirect('list_disciplinas')
     else:
         form = DisciplinaForm()

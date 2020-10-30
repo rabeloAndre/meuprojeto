@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "navbar.html" %}
 
 {% block title %}
@@ -25,3 +26,23 @@
 <a href="{% url 'add_disciplina' %}" style="text-decoration: none;">Adicionar disciplina</a>
 
 {% endblock %}
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Disciplinas</title>
+    </head>
+    <body>
+        <h1>Disciplinas Cadastradas</h1>
+
+        {% for disciplina in disciplinas %}
+            <h2>Nome: {{disciplina.nome}}</h2>
+            <p>Carga Horária: {{disciplina.carga_horaria}}</p>
+            <p>{{disciplina.area}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_disciplina' %}">Adicionar disciplina</a>
+    </form>
+    </body>
+</html>
+>>>>>>> bc9653b3a3fe156877d4fddb95dc093131ad7590
