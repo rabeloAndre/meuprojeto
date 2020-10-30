@@ -1,0 +1,13 @@
+{% extends "navbar.html" %}
+
+{% block title %}
+<title>Add enquete</title>
+{% endblock %}
+
+{% block body %}
+{% csrf_token %}
+{{ form }}
+
+<button type="submit">Adicionar</button>
+
+{% endblock %}

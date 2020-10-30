@@ -1,0 +1,27 @@
+{% extends "navbar.html" %}
+
+{% block title %}
+<title>Disciplinas</title>
+{% endblock %}
+
+{% block body %}
+
+<h1>Disciplinas Cadastradas</h1>
+
+{% if disciplinas %}
+	{% for disciplina in disciplinas %}
+	<h3>Nome: {{disciplina.nome}}</h3>
+	<p>Carga Horária: {{disciplina.carga_horaria}}</p>
+	<ul>Cursos relacionados:
+		{% for curso in disciplina.curso.all %}
+			<li>{{curso.nome}}</li>
+		{% endfor %}
+	</ul>
+	{% endfor %}
+{% else %}
+	<h4>Nenhuma disciplina foi cadastrada</h4>
+{% endif %}
+
+<a href="{% url 'add_disciplina' %}" style="text-decoration: none;">Adicionar disciplina</a>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "navbar.html" %}
+
+{% block title %}
+<title>Cursos</title>
+{% endblock %}
+
+{% block body %}
+
+<h1>Cursos Cadastrados</h1>
+
+{% if cursos %}
+	{% for curso in cursos %}
+	<h3>Nome: {{curso.nome}}</h3>
+	<p>Carga horária: {{curso.carga_horaria}}</p>
+	<p>Área: {{curso.area}}</p>
+	{% endfor %}
+{% else %}
+	<h4>Nenhum curso foi cadastrado</h4>
+{% endif %}
+
+<a href="{% url 'add_curso' %}" style="text-decoration: none;">Adicionar curso</a>
+
+{% endblock %}

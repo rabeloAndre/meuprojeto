@@ -1,0 +1,22 @@
+{% extends "navbar.html" %}
+
+{% block title %}
+<title>Disciplinas</title>
+{% endblock %}
+
+{% block body %}
+
+<h1>Postagens Cadastradas</h1>
+
+{% if postagens %}
+	{% for postagem in postagens %}
+	<h3>Texto: {{postagem.texto}}</h3>
+	<p>Usuário que postou: {{postagem.perfil.nome_usuario}}</p>
+	{% endfor %}
+{% else %}
+	<h4>Nenhuma postagem foi cadastrada</h4>
+{% endif %}
+
+<a href="{% url 'add_postagem' %}" style="text-decoration: none;">Adicionar postagem</a>
+
+{% endblock %}

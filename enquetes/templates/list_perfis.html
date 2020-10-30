@@ -1,0 +1,21 @@
+{% extends "navbar.html" %}
+
+{% block title %}
+<title>Perfis</title>
+{% endblock %}
+
+{% block body %}
+
+<h1>Perfis Cadastrados</h1>
+
+{% if perfis %}
+	{%for perfil in perfis %}
+	<h3>Usuário: {{perfil.nome_usuario}}</h3>
+	{% endfor %}
+{% else %}
+	<h4>Nenhum perfil foi cadastrado</h4>
+{% endif %}
+
+<a href="{% url 'add_perfil' %}" style="text-decoration: none;">Adicionar perfil</a>
+
+{% endblock %}

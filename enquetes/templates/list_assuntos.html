@@ -1,0 +1,22 @@
+{% extends "navbar.html" %}
+
+{% block title %}
+<title>Assuntos</title>
+{% endblock %}
+
+{% block body %}
+
+<h1>Assuntos Cadastrados</h1>
+
+{% if assuntos %}
+	{%for assunto in assuntos %}
+	<h3>Nome: {{assunto.nome}}</h3>
+	<p>Matéria: {{assunto.materia}}</p>
+	{% endfor %}
+{% else %}
+	<h4>Nenhum assunto foi cadastrado</h4>
+{% endif %}
+
+<a href="{% url 'add_assunto' %}" style="text-decoration: none;">Adicionar assunto</a>
+
+{% endblock %}
