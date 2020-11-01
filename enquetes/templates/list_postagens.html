@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends "navbar.html" %}
 
 {% block title %}
@@ -21,23 +20,3 @@
 <a href="{% url 'add_postagem' %}" style="text-decoration: none;">Adicionar postagem</a>
 
 {% endblock %}
-=======
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Perfis</title>
-</head>
-<body>
-
-	<h1>Postagens Cadastradas</h1>
-
-		{% for postagem in postagens %}
-			<h2>Texto: {{postagem.texto}}</h2>
-			<p>Usuário que postou: {{postagem.perfil.nome_usuario}}</p>
-		{% endfor %}
-
-	<a href="{% url 'add_postagem' %}">Adicionar postagem</a>
-
-</body>
-</html>
->>>>>>> bc9653b3a3fe156877d4fddb95dc093131ad7590
